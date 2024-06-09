@@ -1,0 +1,38 @@
+/* -- ЗАДНІЙ ФОН та КНОКИ -- */
+
+/* Встановлення розміру шрифту та внутрішніх відступів для 'bg-company' та 'btn-lg' різних екранів */
+@media (max-width: 331px) {
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-company p {
+    padding: 0 10px
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-company p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-company p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Встановлення заднього кольору та кольору тексту для елементу 'bg-company' */
+.bg-company {
+  background-color: rgb(199, 223, 255);
+  color: rgb(139, 140, 145);
+}

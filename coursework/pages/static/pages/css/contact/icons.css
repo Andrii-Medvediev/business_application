@@ -1,0 +1,97 @@
+/* -- ІКОНКИ -- */
+
+/* Встановлення розмірів іконок для різних екранів */
+@media (max-width: 575px) {
+    .content i {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .content i {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .content i {
+        font-size: 3rem;
+    }
+}
+
+/* Розтягнутися іконок на весь екран */
+.content {
+    flex: 1;
+}
+
+/* Колір іконки за замовчуванням + плавність переходу (кольору, розмірів) для іконок */
+.icon-link i {
+    color: #6c757d;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Збільшення розмірів іконки при наведені */
+.icon-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Зміна кольору іконки при наведені */
+.icon-link:hover i.bi-facebook {
+    color: #1877F2;
+}
+
+.icon-link:hover i.bi-youtube {
+    color: #FF0000;
+}
+
+.icon-link:hover i.bi-instagram {
+    color: #E4405F;
+}
+
+.icon-link:hover i.bi-twitter {
+    color: #1DA1F2;
+}
+
+.icon-link:hover i.bi-telegram {
+    color: #0088cc;
+}
+
+.icon-link:hover i.bi-linkedin {
+    color: #0077B5;
+}
+
+/* Збільшення розмірів іконки при натисканні */
+.icon-link:active i {
+    transform: scale(1.2);
+}
+
+/* Фоновий колір та колір тексту для віджетів вспливаючої підказки */
+.tooltip-facebook .tooltip-inner {
+    background-color: #1877F2;
+    color: #fff;
+}
+
+.tooltip-youtube .tooltip-inner {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+.tooltip-instagram .tooltip-inner {
+    background-color: #E4405F;
+    color: #fff;
+}
+
+.tooltip-twitter .tooltip-inner {
+    background-color: #1DA1F2;
+    color: #fff;
+}
+
+.tooltip-telegram .tooltip-inner {
+    background-color: #0088cc;
+    color: #fff;
+}
+
+.tooltip-linkedin .tooltip-inner {
+    background-color: #0077B5;
+    color: #fff;
+}

@@ -1,0 +1,165 @@
+{% extends 'pages/loyout.html' %}
+{% load static %}
+
+{% block title %}Головна{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/general/blue-border_and_card.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/main/bg-company_and_btn-lg.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block main_active %}active{% endblock %}
+
+{% block content %}
+<div class="container-fluid header text-center py-5">
+  <h1 class="display-4">Finance Fusion</h1>
+  <p class="lead">Легко управляйте своїми доходами та витратами</p>
+</div>
+
+<div class="container mt-3 mt-md-5 mb-5">
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+      <div class="blue-border">
+        <h2 class="text-center">Ласкаво Просимо!</h2>
+        <p class="text-justify mt-1">
+          Наш фінансовий інструмент — ваш надійний помічник у керуванні фінансами. Він допоможе вам ефективно
+          відстежувати доходи та витрати, аналізувати фінансову діяльність і планувати бюджет, спрямовуючи вас до
+          досягнення фінансових цілей. Наша мета - зробити процес управління фінансами простішим і зручнішим для вас,
+          надійно захищаючи ваші фінансові дані та надаючи вам необхідну інформацію для прийняття правильних рішень.
+        </p>
+        <p class="text-justify mb-0">
+          Ми пропонуємо інноваційні рішення для покращення вашого життя. Наш веб-сайт дозволить вам економити час і
+          зусилля, фокусуючись на справжньо важливих аспектах вашого життя. Завдяки передовим технологіям і зручному
+          інтерфейсу ви швидко зможете керувати своїми фінансами, отримувати рекомендації і планувати майбутні
+          витрати.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-4 mb-md-5">
+  <h2 class="text-center mb-4">Наші переваги</h2>
+  <div class="row">
+    <div class="col-md-4 mb-2 mb-md-0 mt-0">
+      <div class="card custom-card d-flex flex-column h-100">
+        <div class="card-body text-center pt-4">
+          <i class="bi bi-clipboard2-data text-success fs-2 mb-3"></i>
+          <h5 class="card-title mt-2 mb-3">Легке відстеження витрат та доходів</h5>
+          <p class="card-text">Зручний інтерфейс для швидкого та легкого відстеження ваших фінансів.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-2 mb-md-0 mt-md-0 mt-2 mt-md-0">
+      <div class="card custom-card d-flex flex-column h-100">
+        <div class="card-body text-center pt-4">
+          <i class="bi bi-shield-check text-success fs-2 mb-3"></i>
+          <h5 class="card-title mt-2 mb-3">Безпечне зберігання даних</h5>
+          <p class="card-text">Надійний захист вашої фінансової інформації за допомогою сучасних
+            технологій безпеки.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-0 mt-2 mt-md-0">
+      <div class="card custom-card d-flex flex-column h-100">
+        <div class="card-body text-center pt-4">
+          <i class="bi bi-currency-exchange text-success fs-2 mb-3"></i>
+          <h5 class="card-title mt-2 mb-3">Підтримка декількох валют</h5>
+          <p class="card-text">Можливість ведення обліку у різних валютах для вашої зручності.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-company py-4">
+  <div class="container">
+    <h2 class="text-center mb-4">Про компанію</h2>
+    <p class="text-justify">
+      Компанія, що стоїть за створенням веб-додатка Finance Fusion, визнана лідером у фінансовій сфері завдяки своєму
+      інноваційному підходу та високоякісним продуктам. Заснована з метою революціонізувати спосіб, яким люди
+      управляють своїми фінансами, компанія пропонує широкий спектр послуг і продуктів, спрямованих на полегшення
+      фінансового планування та управління.
+    </p>
+    <p class="text-justify">
+      Finance Fusion — це один із ключових проєктів цієї компанії, який відзначається своєю простотою в користуванні
+      та високою ефективністю. Завдяки інтегрованому підходу до аналізу доходів та витрат, цей веб-додаток дозволяє
+      користувачам з легкістю контролювати свої фінанси, планувати бюджет і досягати фінансових цілей.
+    </p>
+    <p class="text-justify">
+      Призначений для широкого кола користувачів, від приватних осіб до малих бізнесів, Finance Fusion створений з
+      урахуванням потреб сучасного споживача. Він дозволяє не лише відстежувати витрати і доходи, але й аналізувати
+      їхню структуру, отримувати індивідуальні рекомендації щодо економії та інвестування, що робить його незамінним
+      інструментом для досягнення фінансового благополуччя.
+    </p>
+    <p class="text-justify">
+      Завдяки поєднанню новаторських технологій та експертного фінансового аналізу, компанія залишається на передовій
+      фінтех-індустрії, надаючи своїм клієнтам найкращі рішення для управління фінансами та досягнення фінансових
+      цілей.
+    </p>
+  </div>
+</div>
+
+<div class="container pt-5 mb-3 mb-md-5">
+  <h2 class="text-center mb-4">Відгуки наших користувачів</h2>
+  <div class="row">
+    <div class="col-md-6 mb-2 mb-md-0 mt-0">
+      <div class="card custom-card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <img src="{% static 'pages/img/clients/mikhail.jpeg' %}" alt="Михайло" class="rounded-circle" width="50" height="50">
+            <div class="text-center">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <span class="ms-2">5.0</span>
+            </div>
+          </div>
+          <p class="card-text text-justify">"Finance Fusion - це ідеальний інструмент для тих, хто хоче зберегти
+            контроль над своїми фінансами. Завдяки його зручному інтерфейсу та аналітичним можливостям, я тепер можу
+            легко планувати свої витрати і вибудовувати стратегію розподілу бюджету та організації фінансів. Відмінний
+            додаток!"</p>
+          <footer class="blockquote-footer text-end">Михайло</footer>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-2 mb-md-0 mt-2 mt-md-0">
+      <div class="card custom-card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <img src="{% static 'pages/img/clients/anna.jpeg' %}" alt="Анна" class="rounded-circle" width="50" height="50">
+            <div class="text-center">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-half text-warning"></i>
+              <span class="ms-2">4.5</span>
+            </div>
+          </div>
+          <p class="card-text text-justify">"Неймовірно задоволена, що відкрила для себе Finance Fusion. Цей додаток
+            став для мене надійним помічником у керуванні фінансами. За допомогою його аналітичних засобів я
+            зрозуміла, де я можу зекономити і як ефективніше розподілити свої доходи. Рекомендую усім, хто цінує свій
+            час і гроші!"</p>
+          <footer class="blockquote-footer text-end">Анна</footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-3 mb-md-5 text-center">
+  <h2 class="mb-3 mb-md-4">Приєднуйтесь до нас</h2>
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-md-4 col-sm-5 col-8 mb-2 px-sm-3">
+      <a href="{% url 'users:sign_up' %}" class="btn btn-primary btn-lg btn-md w-100">Зареєструватися</a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-5 col-8 mb-2 px-sm-3 pt-2 pt-sm-0">
+      <a href="{% url 'users:log_in' %}" class="btn btn-secondary btn-lg w-100">Увійти в аккаунт</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

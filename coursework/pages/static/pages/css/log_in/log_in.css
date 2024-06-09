@@ -1,0 +1,50 @@
+/* ВХІД В АККАУНТ */
+
+/* Встановлення розміру шрифту для різних екранів */
+@media (max-width: 331px) {
+  .form-container {
+      font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 332px) {
+  .form-container {
+      font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-container {
+      font-size: 1rem;
+  }
+}
+
+/* Центрування посилань та розділючава */
+.centered-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Розтягнення основного контенту на весь екран */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Розміщення елементів посилань по центру */
+.flex-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* Встановлення відступів від розділювача */
+.divider {
+  margin: 0 10px;
+}
+
+/* Стилізація повідомлення помилки */
+.error-message {
+  font-size: 0.875em;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}

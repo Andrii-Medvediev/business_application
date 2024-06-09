@@ -1,0 +1,85 @@
+/* -- blue-border та КАРТКИ -- */
+
+/* Вирівнювання тексту по ширині */
+.text-justify {
+  text-align: justify;
+}
+
+/* Встановлення зовнішніх відступів, заокруглення кутів та розмірів шрифтві для різних екранів */
+@media (max-width: 331px) {
+  .blue-border,
+  .custom-card {
+    margin: 0 5px;
+    border-radius: 10px !important;
+  }
+
+  .container h5 {
+    font-size: 1rem;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .container p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 332px) {
+  .blue-border,
+  .card {
+    margin: 0 10px;
+    border-radius: 10px !important;
+  }
+
+  .container h5 {
+    font-size: 1.1rem;
+  }
+
+  .container h2 {
+    font-size: 1.3rem;
+  }
+
+  .container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .blue-border {
+    border-radius: 15px !important;
+  }
+
+  .container h5 {
+    font-size: 1.3rem;
+  }
+
+  .container h2 {
+    font-size: 1.7rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .blue-border {
+    border-radius: 20px !important;
+  }
+}
+
+/* Встановлення рамки, внутрішніх відступів та заокруглення кутів для елементів з класом .blue-border */
+.blue-border {
+  border: 2px solid rgb(202, 202, 255);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Встановлення рамки, заокруглення кутів та тіні для карток */
+.custom-card {
+  border: 2px solid rgb(209, 209, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(87, 72, 255, 0.1);
+}

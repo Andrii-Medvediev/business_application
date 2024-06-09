@@ -1,0 +1,40 @@
+{% extends 'pages/loyout.html' %}
+{% load static %}
+
+{% block title %}Контакти{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/contact/icons.css' %}" rel="stylesheet">
+  <script src="{% static 'pages/js/contact/icons.js' %}"></script>
+{% endblock %}
+
+{% block contact_active %}active{% endblock %}
+
+{% block content %}
+  <div class="content d-flex justify-content-center align-items-center">
+    <a href="https://www.facebook.com" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="YouTube">
+      <i class="bi bi-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://www.twitter.com" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter">
+      <i class="bi bi-twitter"></i>
+    </a>
+    <a href="https://t.me/your_channel" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram">
+      <i class="bi bi-telegram"></i>
+    </a>
+    <a href="https://www.linkedin.com" class="mx-2 mx-sm-3 mx-lg-4 text-decoration-none icon-link"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+  </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'finance/loyout_finance.html' %}
+{% load static %}
+
+{% block title %}Нова транзакція{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/log_in/log_in.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block accounts_active %}active{% endblock %}
+
+{% block content %}
+  <div class="container my-5 main-content">
+    <h2 class="mb-3 text-center">Нова транзакція</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-6 form-container">
+        <form method="POST" novalidate>
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="from_account" class="form-label">Переказ з рахунку</label>
+            {{ form.from_account }}
+            {% for error in form.from_account.errors %}
+              <div class="error-message text-danger">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="mb-3">
+            <label for="to_account" class="form-label">Переказ на рахунок</label>
+            {{ form.to_account }}
+            {% for error in form.to_account.errors %}
+              <div class="error-message text-danger">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Сума транзакції</label>
+            {{ form.amount }}
+            {% for error in form.amount.errors %}
+              <div class="error-message text-danger">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary">Створити транзакцію</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

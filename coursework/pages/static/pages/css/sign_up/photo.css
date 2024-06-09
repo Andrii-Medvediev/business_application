@@ -1,0 +1,37 @@
+/* -- ЗАВАНТАЖЕННЯ ФОТО  -- */
+
+/* -- Стилі для контейнера завантаження фото -- */
+.photo-upload {
+  position: relative;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(131, 224, 255, 0.7);
+}
+
+/* Стилі для поля завантаження файлу */
+.photo-upload input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Встановлення стилів для попереднього перегляду фото */
+.photo-preview {
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  object-fit: cover;
+  display: none;
+  border-radius: 10px;
+}

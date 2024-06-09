@@ -1,0 +1,59 @@
+/* -- ЗАВАНТАЖЕННЯ ФОТО  -- */
+
+/* Вимкнення правого відступу та додавання відступу знизу для екранів з шириною до 575px */
+@media (max-width: 575px) {
+  .photo-upload {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Налаштування: ширини та висоти контейнера + розмір іконки, для різних екранів */
+@media (max-width: 767px) {
+  .photo-upload {
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-upload .icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .photo-upload {
+    width: 200px;
+    height: 200px;
+  }
+
+  .photo-upload .icon {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .photo-upload {
+    width: 250px;
+    height: 250px;
+  }
+
+  .photo-upload .icon {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-upload {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo-upload .icon {
+    font-size: 4rem;
+  }
+}
+
+/* Встановлення кольору для іконки камери */
+.photo-upload .icon {
+  color: #aaa;
+}

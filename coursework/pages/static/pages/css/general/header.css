@@ -1,0 +1,59 @@
+/* -- ЗАГОЛОВОК -- */
+
+/* Встановлення градієнтного фону на заголовок */
+.header {
+  background: linear-gradient(180deg, #a4d4f4, #ffffff);
+}
+  
+/* Встановлення розмірів шрифтів 'h1' та 'p' в заголовку для різних екранів */
+@media (max-width: 331px) {
+  .header p {
+    font-size: 0.7rem;
+  }
+}
+  
+  @media (min-width: 332px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .header p {
+      font-size: 0.8rem;
+    }
+  }
+  
+@media (min-width: 576px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+    
+  .header p {
+    font-size: 1rem;
+  }
+}
+  
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+  
+@media (min-width: 992px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+  
+  .header p {
+    font-size: 1.05rem;
+  }
+}
+  
+@media (min-width: 1440px) {
+  .header h1 {
+    font-size: 5rem;
+  }
+  
+  .header p {
+    font-size: 1.1rem;
+  }
+}

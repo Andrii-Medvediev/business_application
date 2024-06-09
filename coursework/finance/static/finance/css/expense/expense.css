@@ -1,0 +1,125 @@
+/* -- ВИТРАТИ (також ДОХОДИ) -- */
+
+/* Налаштування розмірів іконок та тексту для різних екранів */
+@media (max-width: 331px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 0.8rem;
+  }
+
+  .list-group .account-name {
+    font-size: 0.9rem;
+  }
+
+  .expense-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 332px) and (max-width: 575px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 0.9rem;
+  }
+
+  .list-group .account-name {
+    font-size: 1rem;
+  }
+
+  .expense-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 1rem;
+  }
+
+  .list-group .account-name {
+    font-size: 1.2rem;
+  }
+
+  .expense-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Стилізація для елементів транзакцій */
+.expense {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0px solid;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transition: transform 0.4s ease;
+}
+
+/* Збільшення елементу транзакції при наведенні */
+.expense:hover {
+  transform: scale(1.02);
+}
+
+/* Стилізація для деталей рахунку */
+.expense-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+/* Відступ між назвами рахунку */
+.account-name {
+  margin: 0;
+  color: black;
+}
+
+/* Стилізації для тегу та коментаря */
+.tag,
+.comment {
+  margin: 0;
+  color: gray; 
+  font-style: italic;
+}
+
+/* Стилізації для тегу (жирний) */
+.tag {
+  font-weight: bold; 
+}
+
+/* Стилізація для дати розділення */
+.date-separator {
+  font-weight: bold;
+  background-color: #f0f8ff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Розмір для суми транзакції */
+.transaction-amount {
+  font-size: 1rem;
+}
+
+/* Прибираємо підкреслення для посилань та зглажуємо кути */
+.expense-button {
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.expense-container {
+  margin-bottom: 80px;
+}

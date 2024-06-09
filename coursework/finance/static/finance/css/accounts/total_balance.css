@@ -1,0 +1,19 @@
+/* -- ЗАГАЛЬНИЙ БАЛАНС -- */
+
+/* Стилізація напису "Загальний баланс" */
+.total-balance {
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+
+.total-balance span {
+  display: block;
+}
+
+/* Стилізація суми балансу */
+.total-amount {
+  font-size: 1.5rem;
+  color: black;
+}

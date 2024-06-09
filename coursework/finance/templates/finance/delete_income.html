@@ -1,0 +1,29 @@
+{% extends 'finance/loyout_finance.html' %}
+{% load static %}
+
+{% block title %}Видалити дохід{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/log_in/log_in.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block expenses_active %}active{% endblock %}
+
+{% block content %}
+  <div class="container my-5 main-content">
+    <h2 class="mb-3 text-center">Видалити дохід</h2>
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-6 col-lg-5 form-container">
+        <form method="POST">
+          {% csrf_token %}
+          <p class="text-center">Ви впевнені, що хочете видалити дохід "{{ income }}"?</p>
+          <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-danger">Видалити</button>
+            <a href="{% url 'finance:edit_income' income.id %}" class="btn btn-secondary mt-3">Скасувати</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

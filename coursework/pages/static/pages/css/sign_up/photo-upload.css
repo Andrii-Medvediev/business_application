@@ -1,0 +1,9 @@
+/* Збільшення розмірів іконки при наведенні */
+.photo-upload:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Встановлення стилів (колір та плавність переходу) для іконки камери */
+.photo-upload .icon {
+  transition: transform 0.3s;
+}

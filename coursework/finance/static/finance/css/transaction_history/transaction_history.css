@@ -1,0 +1,82 @@
+/* -- ІСТОРІЯ ТРАНЗАКЦІЙ  -- */
+
+/* Налаштування розмірів тексту та іконок для різних екранів */
+@media (max-width: 331px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 0.8rem;
+  }
+
+  .transaction-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 332px) and (max-width: 575px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 0.9rem;
+  }
+
+  .transaction-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .list-group span,
+  .list-group p,
+  .date-separator {
+    font-size: 1rem;;
+  }
+
+  .transaction-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Стилізація для елементів транзакцій */
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Стилізація для деталей рахунку */
+.account-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Відступ між назвами рахунку */
+.account-name {
+  margin: 0;
+}
+
+/* Стилізація для змін в рахунках */
+.account-changes {
+  margin: 0;
+  color: rgba(113, 113, 113, 0.5);
+}
+
+/* Стилізація для дати розділення */
+.date-separator {
+  font-weight: bold;
+  background-color: #f0f8ff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}

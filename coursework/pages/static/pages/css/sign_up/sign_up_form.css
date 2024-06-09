@@ -1,0 +1,62 @@
+/* -- ФОРМА РЕЄСТРАЦІЇ  -- */
+
+/* Вирівнювання заголовка форми по центру */
+.container h2 {
+  text-align: center;
+}
+
+/* Встановлення розміру шрифту для різних екранів */
+@media (max-width: 331px) {
+  label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 332px) {
+  label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) {
+  label {
+    font-size: 1rem;
+  }
+}
+
+/* Налаштування дочірніх елементів форми */
+.registration-container {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+/* Розтягнення основного контенту на весь екран */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Розтягнення контенту для форми на весь екран */
+.form-container {
+  flex-grow: 1;
+}
+
+/* Адаптивний дизайн для маленьких екранів (розміщення всіх елементів в колонку) */
+@media (max-width: 575px) {
+  .registration-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Стилізація повідомлення помилки */
+.error-message {
+  font-size: 0.875em;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}

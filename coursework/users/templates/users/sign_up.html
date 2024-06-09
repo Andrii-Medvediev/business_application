@@ -1,0 +1,81 @@
+{% extends 'pages/loyout.html' %}
+{% load static %}
+
+{% block title %}Реєстрація{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/sign_up/sign_up_form.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/sign_up/photo_size.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/sign_up/photo-upload.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/sign_up/photo.css' %}" rel="stylesheet">
+  <script src="{% static 'pages/js/sign_up/photo.js' %}"></script>
+{% endblock %}
+
+{% block enter_active %}active{% endblock %}
+
+{% block sign_up_disabled %}disabled{% endblock %}
+
+{% block content %}
+  <div class="container mt-5 main-content"> 
+    <h2 class="mb-3">Форма реєстрації</h2>
+    <div class="row">
+      <form method="POST" novalidate>
+        <div class="registration-container d-flex flex-column flex-sm-row">
+          {% csrf_token %}
+          <div class="photo-upload mb-3 col-md-4 d-flex flex-column align-items-center">
+            <i class="bi bi-camera icon"></i>
+            <img id="photoPreview" class="photo-preview mb-3" src="" alt="Photo Preview">
+            {{ form.photo }}
+          </div>
+          <div class="form-container col-md-8">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Повне Ім'я</label>
+              {{ form.full_name }}
+              {% for error in form.full_name.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Електронна пошта</label>
+              {{ form.email }}
+              {% for error in form.email.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              <label for="login" class="form-label">Логін</label>
+              {{ form.username }}
+              {% for error in form.username.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              <label for="currency" class="form-label">Валюта</label>
+              {{ form.currency }}
+              {% for error in form.currency.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              <label for="password1" class="form-label">Пароль</label>
+              {{ form.password1 }}
+              {% for error in form.password1.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="mb-3">
+              <label for="password2" class="form-label">Підтвердження пароля</label>
+              {{ form.password2 }}
+              {% for error in form.password2.errors %}
+                <div class="text-danger">{{ error }}</div>
+              {% endfor %}
+            </div>
+          </div> 
+        </div>
+        <div class="text-center mt-1 mt-md-3 mb-4 mb-md-5">
+          <button type="submit" class="btn btn-primary">Зареєструватися</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'finance/loyout_finance.html' %}
+{% load static %}
+
+{% block title %}Витрати{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/total_balance.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/expense/expense.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/add_button.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block expenses_active %}active{% endblock %}
+
+
+{% block content %}
+  <div class="container-fluid header text-center py-5">
+    <h1 class="display-4">Витрати</h1>
+  </div>
+
+  <div class="container total-balance">
+    <span>Загальний баланс</span>
+    <span class="total-amount">{{ total_balance }} {{ currency_initials }}</span>
+  </div>
+
+  <div class="container expense-container">
+    <div class="list-group">
+      {% for expense in expenses %}
+        {% with expense.date_and_time|date:"d-m-Y" as current_date %}
+          {% ifchanged current_date %}
+            <div class="date-separator">{{ current_date }}</div>
+          {% endifchanged %}
+        {% endwith %}
+        <a href="{% url 'finance:edit_expense' expense.id %}" class="expense-button">
+          <div class="list-group-item expense d-flex align-items-center justify-content-between w-100">
+            <div class="d-flex align-items-center">
+              <i class="expense-icon {{ expense.category.icon_name }}"></i>
+              <div class="expense-details">
+                <p class="account-name mb-2 mb-sm-3">{{ expense.account.account_name }}</p>
+                <p class="tag mb-1">{{ expense.tag }}</p>
+                <p class="comment">{{ expense.comment }}</p>
+              </div>
+            </div>
+            <span class="transaction-amount">{{ expense.amount }} {{ currency_initials }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <a href="{% url 'finance:add_expense' %}" class="fab">
+    <i class="bi bi-plus"></i>
+  </a>
+{% endblock %}

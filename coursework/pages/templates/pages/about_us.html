@@ -1,0 +1,250 @@
+{% extends 'pages/loyout.html' %}
+{% load static %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/general/blue-border_and_card.css' %}" rel="stylesheet">
+  <link href="{% static 'pages/css/about_us/timeline_and_partner-logo.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block about_us_active %}active{% endblock %}
+
+{% block content %}
+  <div class="container-fluid header text-center py-5">
+    <h1 class="display-4">Про нас</h1>
+  </div>
+
+  <div class="container mt-3 mt-md-5 mb-5">
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+        <div class="blue-border">
+          <h2 class="text-center">Місія та мета компанії</h2>
+          <p class="text-justify mt-1">
+            У Finance Fusion наша місія полягає в тому, щоб надати користувачам потужні та зручні інструменти для
+            управління своїми фінансами. Ми прагнемо допомогти людям ефективно контролювати свої доходи та витрати,
+            планувати бюджет та приймати обґрунтовані фінансові рішення. За допомогою нашої платформи користувачі можуть
+            легко відстежувати свої фінансові потоки, отримувати детальні звіти та аналізувати свої фінансові звички.
+          </p>
+          <p class="text-justify mb-0">
+            Наша мета - забезпечити фінансову прозорість та покращити фінансову грамотність кожного користувача. Ми
+            віримо, що знання та розуміння власних фінансів є ключем до фінансової стабільності та добробуту. Тому ми
+            постійно працюємо над удосконаленням наших інструментів та сервісів, щоб забезпечити максимально зручний і
+            ефективний досвід користування.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mt-md-5 mb-5">
+    <h2 class="text-center mb-4">Історія компанії</h2>
+    <div class="timeline-simple">
+      <div class="timeline-event">
+        <h5>2015: Заснування компанії</h5>
+        <p class="text-justify">Finance Fusion була заснована у 2015 році групою ентузіастів у галузі фінансів та IT.
+          Ідея створення платформи виникла з бажання спростити процес управління особистими фінансами та зробити його
+          доступним для всіх. Перші розробки включали базові інструменти для відстеження доходів та витрат, а також
+          простий інтерфейс користувача. Перші роки роботи були спрямовані на те, щоб зрозуміти потреби користувачів і
+          створити продукт, який би задовольняв їхні запити. Ми проводили багато зустрічей з потенційними користувачами,
+          збирали їхні відгуки та вдосконалювали нашу платформу.</p>
+      </div>
+      <div class="timeline-event">
+        <h5>2017: Впровадження мобільного додатку</h5>
+        <p class="text-justify">У 2017 році ми запустили наш перший мобільний додаток для платформ Android та iOS. Це
+          дозволило користувачам мати доступ до своїх фінансів у будь-який час та у будь-якому місці. Мобільний додаток
+          включав функції для швидкого введення витрат, перегляду балансу рахунків та отримання сповіщень про фінансові
+          події. Завдяки мобільному додатку ми значно розширили нашу аудиторію. Користувачі оцінили зручність мобільного
+          доступу до своїх фінансових даних, що дозволило їм краще контролювати свої витрати навіть у дорозі.</p>
+      </div>
+      <div class="timeline-event">
+        <h5>2018: Інтеграція з банківськими рахунками</h5>
+        <p class="text-justify">У 2018 році ми здійснили інтеграцію з банківськими рахунками, що дозволило автоматично
+          аналізувати транзакції користувачів. Це значно спростило відстеження доходів та витрат, адже тепер вводити
+          дані вручну. Інтеграція дозволила зберігати час та мінімізувати помилки при введенні даних. Ми також
+          впровадили функцію автоматичних звітів, які генеруються на основі банківських транзакцій. Користувачі можуть
+          отримувати детальні звіти про свої фінанси, що допомагає їм краще планувати бюджет та
+          аналізувати фінансові звички.</p>
+      </div>
+      <div class="timeline-event">
+        <h5>2020: Розширення функціоналу</h5>
+        <p class="text-justify">У 2020 році ми додали інструменти для інвестиційного аналізу. Це дозволило користувачам
+          приймати більш обґрунтовані фінансові рішення щодо своїх інвестицій. Новий функціонал включав можливість
+          аналізу портфеля інвестицій, прогнозування доходності та оцінки ризиків. Ми також запровадили функцію
+          порівняння інвестиційних продуктів, що допомагає користувачам вибрати найбільш вигідні варіанти для
+          інвестування. Завдяки цьому, наша платформа стала не лише інструментом для управління витратами, але й
+          помічником у світі інвестицій.</p>
+      </div>
+      <div class="timeline-event">
+        <h5>2023: Мільйон користувачів</h5>
+        <p class="text-justify">У 2023 році ми досягли позначки у мільйон користувачів по всьому світу. Це підтвердило
+          популярність та ефективність нашої платформи. Ми продовжували розширювати наші сервіси, додаючи нові функції
+          та покращуючи існуючі, щоб забезпечити максимальну зручність для наших користувачів. Ми також розширили нашу
+          присутність на міжнародному ринку, відкривши офіси у кількох нових країнах та локалізувавши нашу платформу для
+          різних мов. Це дозволило нам краще розуміти потреби користувачів з різних регіонів та адаптувати наші послуги
+          під їхні вимоги.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mt-md-5 mb-5">
+    <h2 class="text-center mb-4">Команда</h2>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card custom-card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-start mb-3">
+              <img src="{% static 'pages/img/team/oleksandr_ivanenko.jpg' %}" alt="Oleksandr Ivanenko" class="rounded-circle me-3"
+                width="50" height="50">
+              <div>
+                <h5 class="mb-0">Олександр Іваненко</h5>
+                <p class="mb-0">Генеральний директор (CEO)</p>
+              </div>
+            </div>
+            <p class="card-text text-justify">Має понад 15 років досвіду у сфері фінансів та управління бізнесом.
+              Займається стратегічним плануванням та розвитком компанії.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card custom-card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-start mb-3">
+              <img src="{% static 'pages/img/team/natalia_kovalchuk.jpg' %}" alt="Natalia Kovalchuk" class="rounded-circle me-3"
+                width="50" height="50">
+              <div>
+                <h5 class="mb-0">Наталія Ковальчук</h5>
+                <p class="mb-0">Головний фінансовий директор (CFO)</p>
+              </div>
+            </div>
+            <p class="card-text text-justify">Експерт у фінансовому аналізі та плануванні, з багаторічним досвідом
+              роботи у банківській сфері.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3 mb-md-0 mt-0 mt-md-3">
+        <div class="card custom-card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-start mb-3">
+              <img src="{% static 'pages/img/team/andrii_kravchenko.jpg' %}" alt="Andrii Kravchenko" class="rounded-circle me-3"
+                width="50" height="50">
+              <div>
+                <h5 class="mb-0">Андрій Кравченко</h5>
+                <p class="mb-0">Технічний директор (CTO)</p>
+              </div>
+            </div>
+            <p class="card-text text-justify">Провідний спеціаліст у галузі програмування та IT-інновацій,
+              відповідальний за технічну реалізацію проектів.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-0 mt-0 mt-md-3">
+        <div class="card custom-card h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-start mb-3">
+              <img src="{% static 'pages/img/team/iryna_lysenko.jpg' %}" alt="Iryna Lysenko" class="rounded-circle me-3" width="50"
+                height="50">
+              <div>
+                <h5 class="mb-0">Ірина Лисенко</h5>
+                <p class="mb-0">Маркетинговий директор (CMO)</p>
+              </div>
+            </div>
+            <p class="card-text text-justify">Має великий досвід у сфері маркетингу та реклами, керує просуванням бренду
+              Finance Fusion на ринку.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mt-md-5 mb-5">
+    <h2 class="text-center mb-4">Наші цінності</h2>
+    <div class="row">
+      <div class="col-md-6 col-xxl-3 mb-3 mb-md-3 mb-xxl-0">
+        <div class="card custom-card d-flex flex-column h-100">
+          <div class="card-body text-center pt-4">
+            <i class="bi bi-people-fill text-info fs-2 mb-3"></i>
+            <h5 class="card-title mt-2 mb-3">Клієнтоорієнтованість</h5>
+            <p class="card-text">Ми ставимо потреби наших клієнтів на перше місце і постійно працюємо над покращенням їх
+              досвіду користування.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xxl-3 mb-3 mb-md-3 mb-xxl-0">
+        <div class="card custom-card d-flex flex-column h-100">
+          <div class="card-body text-center pt-4">
+            <i class="bi bi-cpu text-info fs-2 mb-3"></i>
+            <h5 class="card-title mt-2 mb-3">Інновації</h5>
+            <p class="card-text">Ми постійно шукаємо нові підходи та рішення для забезпечення найкращих фінансових
+              інструментів.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xxl-3 mb-3 mb-md-0 mt-0 mt-md-3 mt-xxl-0">
+        <div class="card custom-card d-flex flex-column h-100">
+          <div class="card-body text-center pt-4">
+            <i class="bi bi-transparency text-info fs-2 mb-3"></i>
+            <h5 class="card-title mt-2 mb-3">Прозорість</h5>
+            <p class="card-text">Ми надаємо клієнтам повну прозорість у всіх аспектах нашої роботи, щоб забезпечити
+              довіру та надійність.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xxl-3 mb-0 mt-0 mt-md-3 mt-xxl-0">
+        <div class="card custom-card d-flex flex-column h-100">
+          <div class="card-body text-center pt-4">
+            <i class="bi bi-shield-shaded text-info fs-2 mb-3"></i>
+            <h5 class="card-title mt-2 mb-3">Безпека</h5>
+            <p class="card-text">Ми гарантуємо високий рівень безпеки даних наших користувачів та захист їх особистої
+              інформації.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3 mt-md-5 mb-5">
+    <h2 class="text-center mb-4">Партнери</h2>
+    <div class="row justify-content-center mx-2">
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/private_bank.png' %}" alt="Privat Bank" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/monobank.png' %}" alt="Monobank" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/softserve.png' %}" alt="SoftServe" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/microsoft.png' %}" alt="Microsoft" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/santander.png' %}" alt="Santander" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/chase_bank.png' %}" alt="Chase Bank" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/deutsche_bank.png' %}" alt="Deutsche Bank" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/bnp_paribas.png' %}" alt="BNP Paribas" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/global_logic.png' %}" alt="GlobalLogic" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/luxoft.png' %}" alt="Luxoft" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/google.png' %}" alt="Google" class="partner-logo">
+      </div>
+      <div class="col-4 col-md-3 col-lg-2">
+        <img src="{% static 'pages/img/partners/oracle.png' %}" alt="Oracle" class="partner-logo ">
+      </div>
+    </div>
+  </div>
+{% endblock %}

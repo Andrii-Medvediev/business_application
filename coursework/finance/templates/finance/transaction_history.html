@@ -1,0 +1,61 @@
+{% extends 'finance/loyout_finance.html' %}
+{% load static %}
+
+{% block title %}Історія транзакцій{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/transaction_history/transaction_history.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block accounts_active %}active{% endblock %}
+
+{% block content %}
+  <div class="container-fluid header text-center py-5">
+    <h1 class="display-4">Історія транзакцій</h1>
+  </div>
+
+  <div class="container mb-4">
+    <div class="list-group">
+      {% for record in history %}
+        {% with record.date_and_time|date:"d-m-Y" as current_date %}
+          {% ifchanged current_date %}
+            <div class="date-separator">{{ current_date }}</div>
+          {% endifchanged %}
+        {% endwith %}
+        <div class="list-group-item transaction">
+          {% if record.change_type %}
+            <div class="d-flex align-items-center">
+              <i class="transaction-icon {{ record.change_type.icon_name }}"></i>
+              <div class="account-details">
+                <p class="account-name mb-1 mb-sm-2">{{ record.account.account_name }}</p>
+                <p class="account-changes">{{ record.change_type.change_name }}</p>
+              </div>
+            </div>
+            <span class="transaction-amount">
+              {% if record.change_type.change_name == 'Видалення рахунку' %}
+                -{{ record.amount }}
+              {% elif record.amount > 0 %}
+                +{{ record.amount }}
+              {% else %}
+                {{ record.amount }}
+              {% endif %}
+              {{ currency_initials }}
+            </span>
+          {% else %}
+            <div class="d-flex align-items-center">
+              <i class="transaction-icon bi bi-arrow-down"></i>
+              <div class="account-details">
+                <p class="account-name mb-1 mb-sm-2">{{ record.from_account.account_name }}</p>
+                <p class="account-name">{{ record.to_account.account_name }}</p>
+              </div>
+            </div>
+            <span class="transaction-amount">
+              {{ record.amount }} {{ currency_initials }}
+            </span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

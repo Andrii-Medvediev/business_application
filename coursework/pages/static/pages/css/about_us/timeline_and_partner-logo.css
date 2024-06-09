@@ -1,0 +1,44 @@
+/* -- ІСТОРІЯ КОМПАНІЇ та ЛОГОТИПИ ПАРТНЕРІВ -- */
+
+/* Встановлення зовнішніх відступів та заокруглення кутів для елементів історії компанії для різних екранів*/
+@media (max-width: 331px) {
+  .timeline-simple {
+    margin: 0 5px;
+    border-radius: 10px !important;
+  }
+}
+
+@media (min-width: 332px) {
+  .timeline-simple {
+    margin: 0 10px;
+    border-radius: 10px !important;
+  }
+}
+
+/* Стилі для подій в хронології історії компанії */
+.timeline-simple .timeline-event {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #eef6fc;
+  box-shadow: 0 3px 6px rgba(52, 82, 255, 0.373);
+  }
+
+/* Стилі для тексту в подіях хронології історії компанії */
+.timeline-simple .timeline-event p {
+  margin-bottom: 0;
+}
+
+/* Встановлення зовнішніх відступів для логотипів партнерів */
+@media (max-width: 576px) {
+  .partner-logo {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* Стилі для логотипів партнерів */
+.partner-logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

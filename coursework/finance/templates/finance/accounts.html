@@ -1,0 +1,56 @@
+{% extends 'finance/loyout_finance.html' %}
+{% load static %}
+
+{% block title %}Рахунки{% endblock %}
+
+{% block links %}
+  <link href="{% static 'pages/css/general/header.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/total_balance.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/icon_buttons.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/accounts.css' %}" rel="stylesheet">
+  <link href="{% static 'finance/css/accounts/add_button.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block accounts_active %}active{% endblock %}
+
+{% block content %}
+  <div class="container-fluid header text-center py-5">
+    <h1 class="display-4">Рахунки</h1>
+  </div>
+
+  <div class="container total-balance">
+    <span>Загальний баланс</span>
+    <span class="total-amount">{{ total_balance }} {{ currency_initials }}</span>
+  </div>
+
+  <div class="container icon-buttons">
+    <a href="{% url 'finance:transaction_history' %}" class="icon-button">
+      <div class="icon">
+        <i class="bi bi-clock-history"></i>
+      </div>
+      <span>Історія транзакцій</span>
+    </a>
+    <a href="{% url 'finance:new_transaction' %}" class="icon-button">
+      <div class="icon">
+        <i class="bi bi-plus-circle"></i>
+      </div>
+      <span>Нова транзакція</span>
+    </a>
+  </div>
+
+  <div class="container accounts">
+    {% for account in accounts %}
+      <a href="{% url 'finance:edit_account' account.id %}" class="account-button">
+        <div class="account-details">
+          <i class="{{ account.category.icon_name }} account-icon"></i>
+          <span>{{ account.account_name }}</span>
+        </div>
+        <span>{{ account.account_amount }} {{ currency_initials }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  <a href="{% url 'finance:add_account' %}" class="fab">
+    <i class="bi bi-plus"></i>
+	</a>
+{% endblock %}
